@@ -1,0 +1,218 @@
+:root {
+  --borderRadiusInner: 10px;
+  --borderRadiusOuter: 25px;
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*:hover {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: work-sans, sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.card {
+  background-color: var(--Cream);
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+.card .container {
+  max-width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: var(--borderRadiusOuter);
+  -webkit-border-radius: var(--borderRadiusOuter);
+  -moz-border-radius: var(--borderRadiusOuter);
+  -ms-border-radius: var(--borderRadiusOuter);
+  -o-border-radius: var(--borderRadiusOuter);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .card .container {
+    flex-direction: column;
+    max-width: 375px;
+    height: 600px;
+  }
+}
+
+.card .container .image {
+  background-image: url(image-product-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 50%;
+  height: 100%;
+  border-top-left-radius: var(--borderRadiusOuter);
+  border-bottom-left-radius: var(--borderRadiusOuter);
+}
+
+@media (max-width: 767px) {
+  .card .container .image {
+    background-image: url(image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35%;
+    width: 375px;
+    border-top-left-radius: var(--borderRadiusOuter);
+    border-top-right-radius: var(--borderRadiusOuter);
+    border-bottom-left-radius: 0;
+  }
+}
+
+.card .content {
+  height: 100%;
+  max-width: 375px;
+  background-color: var(--White);
+  text-align: start;
+  flex-basis: 50%;
+  padding: 25px;
+  border-top-right-radius: var(--borderRadiusOuter);
+  border-bottom-right-radius: var(--borderRadiusOuter);
+}
+
+@media (max-width: 767px) {
+  .card .content {
+    width: 375px;
+    height: 65%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: var(--borderRadiusOuter);
+    border-bottom-right-radius: var(--borderRadiusOuter);
+  }
+}
+
+.card .container span {
+  font-size: 14px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--Darkgrayishblue);
+}
+
+.card .container h2 {
+  font-size: 36px;
+  font-family: "fraunces";
+  margin: 15px 0;
+}
+
+@media (max-width: 767px) {
+  .card h2 {
+    padding-right: 10px;
+  }
+}
+
+.card .content p {
+  color: var(--Darkgrayishblue);
+  line-height: 1.8;
+  font-size: 14px;
+  padding: 0px 25px 15px 0;
+  margin: 0;
+}
+
+.card .content .price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card .content .price .new {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "fraunces";
+  color: var(--Darkcyan);
+}
+
+.card .content .price .del {
+  text-decoration: line-through;
+  color: var(--Darkgrayishblue);
+  margin-left: 10px;
+}
+
+.card .content .buy a {
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  background-color: var(--Darkcyan);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: var(--borderRadiusInner);
+  -webkit-border-radius: var(--borderRadiusInner);
+  -moz-border-radius: var(--borderRadiusInner);
+  -ms-border-radius: var(--borderRadiusInner);
+  -o-border-radius: var(--borderRadiusInner);
+}
+
+.card .content .buy a:hover {
+  background-color: var(--Darkgrayishblue);
+}
+
+.card .container .buy i {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .card .content p {
+    margin: 0;
+  }
+}
