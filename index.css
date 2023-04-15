@@ -62,6 +62,7 @@ body {
   background-color: var(--Cream);
   margin: 0 auto;
   padding-top: 100px;
+  height: 100vh;
   text-align: center;
 }
 
